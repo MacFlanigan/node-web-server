@@ -40,7 +40,7 @@ app.get('/', (req, res) => {
 
 app.get('/about', (req, res) => {
   res.render('about.hbs', {
-    pageTitle: 'About page',
+    pageTitle: 'About page'
   });
 });
 
@@ -52,6 +52,14 @@ app.get('/bad', (req, res) => {
     errorMessage: 'Unable to complete request'
   });
 });
+
+app.get('/projects', (req, res) => {
+  res.render('projects.hbs', {
+    pageTitle: 'Projects page',
+    message: 'Welcome to the projects page'
+  });
+});
+
 app.listen(port, () => {
   console.log(`Server is up on port ${port}`);
 });
